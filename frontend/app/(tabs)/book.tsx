@@ -414,6 +414,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 16,
     right: 16,
+    pointerEvents: 'none',
   },
   input: {
     backgroundColor: '#fff',
