@@ -27,7 +27,7 @@ app.add_middleware(
 # MongoDB Connection
 MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
 client = AsyncIOMotorClient(MONGO_URL)
-db = client.mars_cleaning
+db = client[os.getenv("DB_NAME", "mars_cleaning")]
 
 # Security
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
